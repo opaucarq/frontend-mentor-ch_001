@@ -1,0 +1,46 @@
+@font-face {
+    font-family: "Public Sans";
+    src: url("../assets/PublicSans-Regular.woff2") format("woff2");
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Public Sans";
+    font-weight: 700;
+    src: url("../assets/PublicSans-Bold.woff2") format("woff2");
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "DM Display";
+    src: url("../assets/DMSerifDisplay-Regular.woff2") format("woff2");
+    font-display: swap;
+    font-style: normal;
+}
+
+:root {
+    --bg-pink-100: hsl(337, 60%, 64%);
+    --bg-pink-200: hsl(337, 48%, 49%);
+    --bg-body: hsl(207, 44%, 95%);
+    --bg-blue-100: hsl(207, 16%, 50%);
+    --bg-blue-200: hsl(209, 27%, 15%);
+    --text1: hsl(220, 60%, 99%);
+    --text2: hsl(207, 33%, 32%);
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    font-family: "Public Sans";
+    background-color: var(--bg-body);
+    color: var(--text2);
+}
+
+.sr-only {
+    position: absolute;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
