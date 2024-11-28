@@ -26,6 +26,7 @@
 /*  Variables */
 :root {
   --blue-900: #0b0d17;
+  --blue-500: #979797;
   --blue-300: #d0d6f9;
   --white: #ffffff;
 
@@ -35,40 +36,38 @@
 
   --animation-primary-ease-in: 0.8s cubic-bezier(0.25, 1, 0.1, 1);
   --animation-primary-expo: 0.8s cubic-bezier(0.87, 0, 0.13, 1);
-
-  /* --size: clamp(5em, 7vw, 7em); */
 }
 
 /* Typography */
 .heading-xl {
   font-family: "Bellefair", sans-serif;
-  font-size: clamp(80px, 7.5vw, 144px);
+  font-size: clamp(80px, 15vw, 144px);
 }
 
 .heading-lg {
   font-family: "Bellefair", sans-serif;
-  font-size: clamp(56px, 4.5vw, 96px);
+  font-size: clamp(56px, 4.25vw, 96px);
 }
 
 .heading-md {
   font-family: "Bellefair", sans-serif;
-  font-size: clamp(24px, 4.5vw, 56px);
+  font-size: clamp(24px, 4.25vw, 56px);
 }
 
 .heading-sm {
   font-family: "Bellefair", sans-serif;
-  font-size: clamp(18px, 4.5vw, 32px);
+  font-size: clamp(18px, 4.25vw, 32px);
 }
 
 .subheading-lg {
   font-family: "Barlow Condensed", sans-serif;
-  font-size: clamp(20px, 4.5vw, 28px);
+  font-size: clamp(20px, 4.25vw, 28px);
   letter-spacing: 4px;
 }
 
 .subheading-md {
   font-family: "Bellefair", sans-serif;
-  font-size: clamp(16px, 4.5vw, 28px);
+  font-size: clamp(16px, 4.25vw, 28px);
 }
 
 .body-sm {
@@ -79,13 +78,14 @@
 
 .body-md {
   font-family: "Barlow Condensed", sans-serif;
-  font-size: clamp(14px, 4.5vw, 16px);
+  font-size: clamp(14px, 4.25vw, 16px);
   letter-spacing: 2px;
 }
 
 .body-lg {
   font-family: "Barlow", sans-serif;
-  font-size: clamp(15px, 4.5vw, 18px);
+  font-size: clamp(15px, 4.25vw, 18px);
+  line-height: 1.8;
 }
 
 /* Utilities */
@@ -110,7 +110,7 @@
 .hidden {
   display: none;
 
-  @media (width < 820px) {
+  @media (width <= 820px) {
     display: block;
   }
 }
@@ -122,10 +122,24 @@
   -webkit-backdrop-filter: blur(20px);
 }
 
+.content-padding {
+  padding-inline: 0;
+
+  @media (width< 820px) {
+    padding-inline: 1.25em;
+  }
+}
+
 /* Main */
 body {
-  min-height: 100svh;
+  height: 100dvh;
   font-family: "Barlow", sans-serif;
   background-color: var(--blue-900);
   color: var(--white);
+}
+
+main {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 0.25fr auto;
 }
