@@ -1,13 +1,13 @@
 * {
   margin: 0;
   padding: 0;
-  color: inherit;
   font-weight: var(--fw-base);
 }
 
 *,
 *::before,
 *::after {
+  color: inherit;
   box-sizing: border-box;
 }
 
@@ -44,6 +44,12 @@ li {
 
 a {
   text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 @media (prefers-reduced-motion: reduce) {
