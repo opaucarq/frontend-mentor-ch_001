@@ -31,7 +31,10 @@
 
   --fw-base: 400;
 
-  --section-padding: clamp(16px, 5vw, 24px);
+  --section-padding: clamp(20px, 4.5vw, 64px);
+
+  --animation-primary-ease-in: 0.8s cubic-bezier(0.25, 1, 0.1, 1);
+  --animation-primary-expo: 0.8s cubic-bezier(0.87, 0, 0.13, 1);
 
   /* --size: clamp(5em, 7vw, 7em); */
 }
@@ -44,28 +47,28 @@
 
 .heading-lg {
   font-family: "Bellefair", sans-serif;
-  font-size: clamp(56px, 5vw, 96px);
+  font-size: clamp(56px, 4.5vw, 96px);
 }
 
 .heading-md {
   font-family: "Bellefair", sans-serif;
-  font-size: clamp(24px, 5vw, 56px);
+  font-size: clamp(24px, 4.5vw, 56px);
 }
 
 .heading-sm {
   font-family: "Bellefair", sans-serif;
-  font-size: clamp(18px, 5vw, 32px);
+  font-size: clamp(18px, 4.5vw, 32px);
 }
 
 .subheading-lg {
   font-family: "Barlow Condensed", sans-serif;
-  font-size: clamp(20px, 5vw, 28px);
+  font-size: clamp(20px, 4.5vw, 28px);
   letter-spacing: 4px;
 }
 
 .subheading-md {
   font-family: "Bellefair", sans-serif;
-  font-size: clamp(16px, 5vw, 28px);
+  font-size: clamp(16px, 4.5vw, 28px);
 }
 
 .body-sm {
@@ -76,25 +79,26 @@
 
 .body-md {
   font-family: "Barlow Condensed", sans-serif;
-  font-size: clamp(14px, 5vw, 16px);
+  font-size: clamp(14px, 4.5vw, 16px);
   letter-spacing: 2px;
 }
 
 .body-lg {
   font-family: "Barlow", sans-serif;
-  font-size: clamp(15px, 5vw, 18px);
+  font-size: clamp(15px, 4.5vw, 18px);
 }
 
 /* Utilities */
 .sr-only {
   position: absolute;
-  width: 0px;
-  height: 0px;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
   overflow: hidden;
+  clip: rect(0, 0, 0, 0);
   white-space: nowrap;
-  clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(50%);
-  clip-path: inset(50%);
+  border-width: 0;
 }
 
 .container {
@@ -103,12 +107,25 @@
   margin-inline: auto;
 }
 
+.hidden {
+  display: none;
+
+  @media (width < 820px) {
+    display: block;
+  }
+}
+
+.background-blur {
+  --color: hsla(0, 0%, 100%, 0);
+  background: var(--color);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
 /* Main */
 body {
+  min-height: 100svh;
   font-family: "Barlow", sans-serif;
   background-color: var(--blue-900);
   color: var(--white);
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }

@@ -7,13 +7,100 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/public/favicon-32x32.png"
+      href="./public/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="/src/css/reset.css" />
-    <link rel="stylesheet" href="/src/css/styleguide.css" />
+    <link
+      rel="preload"
+      href="./src/fonts/Bellefair-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./src/fonts/Barlow-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./src/fonts/BarlowCondensed-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/styleguide.css" />
+    <link rel="stylesheet" href="./src/css/components.css" />
+    <link rel="stylesheet" href="./src/css/home/home.css" />
     <title>Frontend Mentor | Space tourism website</title>
   </head>
   <body>
-    <h1 class="sr-only">Space tourism website from Frontend Mentor</h1>
+    <header>
+      <nav class="navbar">
+        <div class="navbar-left navbar-item">
+          <img src="./public/assets/shared/logo.svg" alt="Space tourism logo" />
+          <div class="separator"></div>
+        </div>
+
+        <ul class="navbar-right navbar-item background-blur">
+          <li>
+            <a href="/" class="navbar-link body-md" aria-current="page">
+              <span>00</span>Home
+            </a>
+          </li>
+          <li>
+            <a href="/" class="navbar-link body-md">
+              <span>01</span>Destination
+            </a>
+          </li>
+          <li>
+            <a href="/" class="navbar-link body-md"><span>02</span>Crew</a>
+          </li>
+          <li>
+            <a href="/" class="navbar-link body-md">
+              <span>03</span>Technology
+            </a>
+          </li>
+        </ul>
+
+        <button aria-label="open menu" class="hidden">
+          <img src="./public/assets/shared/icon-hamburger.svg" alt="" />
+        </button>
+      </nav>
+    </header>
+    <nav class="navbar-mobile background-blur" aria-hidden="true">
+      <div class="navbar-mobile-top">
+        <button aria-label="close menu">
+          <img src="./public/assets/shared/icon-close.svg" alt="" />
+        </button>
+      </div>
+
+      <ul class="navbar-mobile-bottom">
+        <li>
+          <a href="/" class="navbar-link mobile body-md" aria-current="page">
+            <span>00</span>Home
+          </a>
+        </li>
+        <li>
+          <a href="/" class="navbar-link mobile body-md"
+            ><span>01</span>Destination
+          </a>
+        </li>
+        <li>
+          <a href="/" class="navbar-link mobile body-md"><span>02</span>Crew</a>
+        </li>
+        <li>
+          <a href="/" class="navbar-link mobile body-md">
+            <span>03</span>Technology
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1 class="sr-only">Space tourism website from Frontend Mentor</h1>
+    </main>
   </body>
 </html>
