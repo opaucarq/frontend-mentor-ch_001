@@ -186,7 +186,7 @@
 
 /* Main */
 body {
-  height: 100dvh;
+  height: 100vh;
   font-family: "Barlow", sans-serif;
   background-color: var(--blue-900);
   color: var(--white);
