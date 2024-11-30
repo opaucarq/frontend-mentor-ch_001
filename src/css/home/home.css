@@ -1,14 +1,11 @@
-.background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
 .hero {
   width: 100%;
   height: 100%;
   padding-block: 8em;
+
+  @media (width <= 820px) {
+    padding-block: 5em;
+  }
 }
 
 .hero-container {
@@ -29,7 +26,7 @@
 
   @media (width <= 1024px) {
     grid-template-columns: 1fr;
-    gap: 7em;
+    gap: 6em;
   }
 }
 
@@ -38,15 +35,7 @@
     text-transform: uppercase;
   }
 
-  & p {
-    color: var(--blue-300);
-
-    @media (width <= 1024px) {
-      max-width: 35em;
-    }
-  }
-
-  @media (width <= 1024px) {
+   @media (width <= 1024px) {
     text-align: center;
   }
 }
@@ -60,6 +49,13 @@
   margin-bottom: 0.2em;
 }
 
+.hero-description {
+  color: var(--blue-300);
+
+  @media (width <= 1024px) {
+    max-width: 35em;
+  }
+}
 .hero-cta {
   display: flex;
   align-items: center;
